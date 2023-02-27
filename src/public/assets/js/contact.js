@@ -10,9 +10,6 @@ var _hash = window.location.hash;
 	#alert_mandatory	= email not sent - required fields empty
 **/	jQuery(_hash).show();
 
-// const validator = require('validator')
-
-
 async function createUsPost() {
 	let fullname = document.getElementById('fullname').value;
 	let email = document.getElementById('email').value;
