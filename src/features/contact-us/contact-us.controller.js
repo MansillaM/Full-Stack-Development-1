@@ -3,6 +3,7 @@ const asyncWrapper = require('../../shared/util/base-utils')
 const validator = require('validator')
 
 const createContactUs = asyncWrapper(async (req, res) => {
+    // Data
     const {
       fullname,
       email,
@@ -15,7 +16,7 @@ const createContactUs = asyncWrapper(async (req, res) => {
       file
     } = req.body;
 
-      // Validate email and phone
+    // Validate email and phone
     if (!validator.isEmail(email)) {
         return res.status(400).json({ msg: 'Invalid email' });
     }
